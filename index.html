@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splitter - Tip Calculator</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="./images/logo.svg" alt="Splitter Logo">
+        </div>
+        <div class="card">
+            <div class="inputs">
+                <div class="bill-container">
+                    <div class="label-wrapper">
+                        <label for="inp-bill">Bill</label>
+                    </div>
+                    <div class="inp-wrapper">
+                        <input class="inp-text" type="text" name="inp-bill" id="inp-bill" placeholder="0">
+                        <img src="./images/icon-dollar.svg" alt="Dollar Icon">
+                    </div>
+                </div>
+                <div class="tip-container">
+                    <div class="label-wrapper">
+                        <label for="inp-tip">Select Tip %</label>
+                    </div>
+                    <div class="btn-wrapper">
+                        <div class="btn tip">5%</div>
+                        <div class="btn tip">10%</div>
+                        <div class="btn tip">15%</div>
+                        <div class="btn tip">25%</div>
+                        <div class="btn tip">50%</div>
+                        <input class="inp-text" type="text" name="inp-tip" id="inp-tip" placeholder="Custom">
+                    </div>
+                </div>
+                <div class="people-container">
+                    <div class="label-wrapper">
+                        <label for="inp-people">Number of People</label>
+                        <div class="error-msg">Can't be zero</div>
+                    </div>
+                    <div class="inp-wrapper">
+                        <input class="inp-text error-wrapper" type="text" name="inp-people" id="inp-people" placeholder="0">
+                        <img src="./images/icon-person.svg" alt="Person Icon">
+                    </div>
+                </div>
+            </div>
+            <div class="outputs">
+                <div class="line-wrapper">
+                    <div class="line-output">
+                        <div class="title-wrapper">
+                            <div class="title">Tip Amount</div>
+                            <div class="divided">/ person</div>
+                        </div>
+                        <div class="value">$0.00</div>
+                    </div>
+                    <div class="line-output">
+                        <div class="title-wrapper">
+                            <div class="title">Total</div>
+                            <div class="divided">/ person</div>
+                        </div>
+                        <div class="value">$0.00</div>
+                    </div>
+                </div>
+                <div class="btn reset empty-reset-color">RESET</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script/app.js"></script>
+</body>
+</html>

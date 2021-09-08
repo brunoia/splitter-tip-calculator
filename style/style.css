@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Space Mono', monospace;
+}
+
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan-1: hsl(186, 14%, 43%);
+  --dark-grayish-cyan-2: hsl(184, 14%, 56%);
+  --light-grayish-cyan-1: hsl(185, 41%, 84%);
+  --light-grayish-cyan-2: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+  --error-msg: hsl(9, 70%, 52%);
+  --btn-hover-effect: hsl(173, 61%, 77%);
+  --empty-reset-color: hsl(183, 79%, 24%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--light-grayish-cyan-1);
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.logo {
+  margin: 5rem 0 3.5rem 0;
+}
+
+.card {
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+
+.card .inputs {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+  padding: 2.5rem;
+}
+
+.card .inputs .label-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .inputs .label-wrapper label {
+  color: var(--dark-grayish-cyan-1);
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.card .inputs .label-wrapper .error-msg {
+  color: var(--error-msg);
+  font-size: 1.5rem;
+  font-weight: bolder;
+  opacity: 0;
+  cursor: default;
+}
+
+.card .inputs .label-wrapper .show-error-msg {
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+
+.card .inputs .inp-text {
+  width: 100%;
+  background-color: var(--light-grayish-cyan-2);
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--very-dark-cyan);
+  font-size: 2.4rem;
+  font-weight: bolder;
+  text-align: right;
+  padding: 0.5rem 2.4rem;
+  cursor: pointer;
+}
+
+.card .inputs .inp-text:focus {
+  outline: none;
+  border: 2px solid var(--strong-cyan);
+}
+
+.card .inputs .show-error-wrapper:focus {
+  border: 2px solid var(--error-msg);
+}
+
+.card .inputs .inp-wrapper {
+  position: relative;
+}
+
+.card .inputs .inp-wrapper img {
+  position: absolute;
+  left: 2.4rem;
+  top: 1.5rem;
+}
+
+.card .inputs .btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.card .inputs .btn-wrapper .btn {
+  width: 46%;
+  background-color: var(--very-dark-cyan);
+  border-radius: 0.5rem;
+  font-size: 2.4rem;
+  font-weight: bolder;
+  text-align: center;
+  color: var(--white);
+  padding: 0.6rem 0;
+  cursor: pointer;
+}
+
+.card .inputs .btn-wrapper .btn:hover {
+  background-color: var(--btn-hover-effect);
+  color: var(--very-dark-cyan);
+}
+
+.card .inputs .btn-wrapper .btn-active {
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+
+.card .inputs .btn-wrapper .inp-text {
+  width: 46%;
+}
+
+.card .outputs {
+  width: 100%;
+  background-color: var(--very-dark-cyan);
+  border-radius: 1.5rem;
+  padding: 2.2rem;
+}
+
+.card .outputs .line-wrapper .line-output {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1.4rem 0 2.4rem 0;
+}
+
+.card .outputs .line-wrapper .line-output .title {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  color: var(--white);
+}
+
+.card .outputs .line-wrapper .line-output .divided {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: var(--dark-grayish-cyan-2);
+}
+
+.card .outputs .line-wrapper .line-output .value {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: var(--strong-cyan);
+}
+
+.card .outputs .btn {
+  width: 100%;
+  background-color: var(--strong-cyan);
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  font-weight: bolder;
+  text-align: center;
+  color: var(--very-dark-cyan);
+  margin-top: 3.4rem;
+  padding: 1rem 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card .outputs .btn:hover {
+  background-color: var(--btn-hover-effect);
+}
+
+.card .outputs .empty-reset-color {
+  background-color: var(--empty-reset-color);
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+    width: 70%;
+    padding: 2.5rem;
+  }
+  .card .inputs {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    width: 64%;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-radius: 2.5rem;
+    padding: 3.4rem;
+    gap: 1.5rem;
+    -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 30px rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 30px rgba(0, 0, 0, 0.05);
+  }
+  .card .inputs {
+    width: 105%;
+    padding: 0 3.5rem 1.5rem 1.5rem;
+  }
+  .card .inputs .label-wrapper {
+    padding: 1rem 0;
+  }
+  .card .inputs .btn-wrapper .btn {
+    width: 30.5%;
+  }
+  .card .inputs .btn-wrapper .inp-text {
+    width: 30.5%;
+  }
+  .card .outputs {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 4rem;
+  }
+  .card .outputs .line-wrapper .line-output {
+    margin: 0.5rem 0 2.4rem 0;
+  }
+  .card .outputs .line-wrapper .line-output .value {
+    font-size: 4.6rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
